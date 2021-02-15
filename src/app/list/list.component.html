@@ -1,0 +1,8 @@
+<div *ngFor="let item of list">
+  <app-item
+    [item]="item"
+    (onDeleteHandler)="delete($event)"
+    (onCompleteHandler)="complete($event)"
+  >
+  </app-item>
+</div>

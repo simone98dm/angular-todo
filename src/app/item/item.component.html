@@ -1,0 +1,24 @@
+<div class="card card-body shadow mb-3">
+  <div class="row">
+    <div class="col-12">
+      <div class="card-title">
+        <strong class="mr-2">{{ item.text }}</strong
+        >&nbsp;
+        <span *ngIf="item.state" class="badge rounded-pill bg-success">
+          <i class="bi bi-check"></i>
+        </span>
+        <span *ngIf="!item.state" class="badge rounded-pill bg-warning text-dark">
+          <i class="bi bi-hourglass-split"></i>
+        </span>
+      </div>
+    </div>
+    <div class="col-12">
+      <button class="btn btn-danger btn-sm" (click)="delete()">
+        <i class="bi bi-trash"></i></button
+      >&nbsp;
+      <button class="btn btn-success btn-sm" (click)="complete()">
+        <i class="bi bi-check2-square"></i>
+      </button>
+    </div>
+  </div>
+</div>

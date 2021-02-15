@@ -1,0 +1,10 @@
+<div class="container">
+  <app-nav></app-nav>
+  <app-form (onCreateItem)="add($event)"></app-form>
+  <app-header [count]="list.length"></app-header>
+  <app-list
+    [list]="list"
+    (onDeleteHandler)="delete($event)"
+    (onCompleteHandler)="complete($event)"
+  ></app-list>
+</div>
